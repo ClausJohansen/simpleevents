@@ -10,6 +10,13 @@ namespace SimpleEvents
     {
         static void Main(string[] args)
         {
+            Observable observable = new Observable();
+            Observer observer = new Observer();
+            observable.SomethingHappened += observer.HandleEvent;
+
+            observable.DoSomething();
+
+            Console.ReadLine();
         }
     }
 }
